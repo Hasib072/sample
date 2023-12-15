@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <!-- Load reCAPTCHA script asynchronously -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <!-- Add reCAPTCHA widget with the correct data-sitekey -->
+      <div class="g-recaptcha" data-sitekey="6LdQMDIpAAAAAKt80_k_-IG10GjIkLUM0P-upKmT"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+    <!-- Define the onloadCallback function to run when reCAPTCHA is ready -->
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        alert("grecaptcha is ready!");
+      };
+    </script>
+    <!-- Load reCAPTCHA script with the onloadCallback function -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  </body>
+</html>
